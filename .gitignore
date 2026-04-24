@@ -13,5 +13,6 @@ compile_commands.json
 
 #executables
 pio_armv8
+pio_armv8.efi
 build
 
