@@ -41,12 +41,6 @@ target_compile_options(pio_armv8
     --target=aarch64-elf 
     -mcpu=cortex-a72+nosimd
 )
-# add_custom_command(TARGET pio_armv8 POST_BUILD
-#   COMMAND ${CMAKE_OBJCOPY}
-#     --target elf64-littleaarch64 # ← must be aarch64, not x86_64
-#     $<TARGET_FILE:pio_armv8>
-#     ${CMAKE_BINARY_DIR}/pio_armv8.elf
-# )
 
 target_compile_options(pio_armv8 PRIVATE
   -glldb -Wall -O2 -ffreestanding -nostdlib -nostartfiles -fno-pic
