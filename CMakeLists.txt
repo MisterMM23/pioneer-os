@@ -26,6 +26,7 @@ target_sources(pio_armv8
     kernel/arch/armv8/qemu/uart.c
     kernel/arch/armv8/boot.S
     kernel/arch/armv8/pl011/pl011_uart.c
+    kernel/libk/kprintf.c
     
     # For now, library code is just added here
     lib/libc/string.c
@@ -35,6 +36,7 @@ target_sources(pio_armv8
 target_include_directories(pio_armv8
   PRIVATE
     kernel/include
+    kernel/libk/include/ 
 
     # In the lib include directory, every library shall have its own search path
     # (e. g. foo.h from lib/include/mylib/foo.h will be included with #include <foo.h> )
