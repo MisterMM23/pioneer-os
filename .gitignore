@@ -1,0 +1,17 @@
+#CMake 
+CMakeFiles/
+cmake_install.cmake
+CMakeCache.txt
+Makefile
+
+#clang 
+.cache/
+compile_commands.json
+
+#MacOS 
+.DS_Store
+
+#executables
+pio_armv8
+build
+

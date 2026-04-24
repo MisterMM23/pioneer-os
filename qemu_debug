@@ -1,0 +1,3 @@
+#!/bin/bash 
+
+lldb armv8/sbin/pio_armv8 --source qemu_debug.gdb

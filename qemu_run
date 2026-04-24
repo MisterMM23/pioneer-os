@@ -1,0 +1,12 @@
+#!/bin/bash
+
+MACHINE=virt
+IMG=armv8/sbin/pio_armv8
+UEFI="/opt/homebrew/Cellar/qemu/10.2.2/share/qemu/edk2-aarch64-code.fd"
+SERIAL="mon:stdio"
+OPTS="-nographic $@"
+DRIVE="file=$IMG,format=raw,index=0"
+
+qemu-system-aarch64 $OPTS -m 2G -M raspi4b -cpu cortex-a72 -serial $SERIAL -kernel $IMG -append "earlycon=pl011,mmio32,0xfe201000 console=ttyAMA1,115200 root=PARTUUID=57b902f5-02 rootwait" 
+
+
