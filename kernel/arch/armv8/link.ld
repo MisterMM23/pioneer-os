@@ -1,3 +1,7 @@
+/*
+ * Generic Linker Script for ARMv8-A 
+ * Taken from:
+ * https://github.com/sypstraw/rpi4-osdev */
 SECTIONS
 {
     . = 0x80000;     /* Kernel load address for AArch64 */

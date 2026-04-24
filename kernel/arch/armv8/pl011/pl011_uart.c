@@ -1,3 +1,9 @@
+/*
+ * PrimCell UART
+ * Taken from:
+ * https://github.com/akshayvcr7/RPi4b-OS/tree/main
+ */
+
 #include <arch/armv8/pl011/pl011_uart.h>
 #include <arch/armv8/raspi4b/reg.h>
 #include <stddef.h>

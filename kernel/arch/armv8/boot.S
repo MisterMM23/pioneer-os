@@ -1,3 +1,9 @@
+/*
+* Generic ARMv8-A Boot Sequence
+* Taken from: 
+* https://github.com/sypstraw/rpi4-osdev
+*/
+
 .section ".text.boot"  // Make sure the linker puts this at the start of the kernel image
 
 .global _start  // Execution starts here

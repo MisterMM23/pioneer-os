@@ -1,3 +1,9 @@
+/*
+ * Raspi4b memory register API
+ * Inspired by:
+ * https://github.com/akshayvcr7/RPi4b-OS/tree/main
+ */
+
 #ifndef REG_H
 #define REG_H
 #include <stddef.h>
