@@ -26,9 +26,6 @@ _start:
 
     // Jump to our main() routine in C (make sure it doesn't return)
 4:  
-    mov x1, #0x9000000
-    mov x2, #0x41
-    str x2, [x1]
     bl      main
     // In case it does return, halt the master core too
     b       1b
