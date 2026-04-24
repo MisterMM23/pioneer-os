@@ -29,6 +29,8 @@
 #define UART0_DMACR UART0_BASE + 0x048
 
 #endif // BOARD_RASPI4B
+
 void pl011_uart_init();
+void pl011_uart_putchar(char c);
 void pl011_uart_puts(const char *data);
 #endif // KERNEL_ARCH_ARMV8_PL011_UART_H

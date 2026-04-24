@@ -4,6 +4,7 @@
  * https://github.com/akshayvcr7/RPi4b-OS/tree/main
  */
 
+#include "drivers/uart.h"
 #include <arch/armv8/pl011/pl011_uart.h>
 #include <arch/armv8/raspi4b/reg.h>
 #include <stddef.h>
@@ -23,6 +24,11 @@ static void is_tx_complete(void) {
   }
 }
 
+void pl011_uart_putchar(char c) {
+  mmio_write(UART0_DR, c);
+  is_tx_complete();
+}
+
 void pl011_uart_puts(const char *data) {
   size_t len = strlen(data);
 
@@ -31,10 +37,9 @@ void pl011_uart_puts(const char *data) {
 
   for (size_t i = 0; i < len; ++i) {
     if (data[i] == '\n') {
-      mmio_write(UART0_DR, '\r');
-      is_tx_complete();
+      pl011_uart_putchar('\r');
     }
-    mmio_write(UART0_DR, data[i]);
+    pl011_uart_putchar(data[i]);
     is_tx_complete();
   }
 }

@@ -5,6 +5,8 @@
 
 void uart_init(struct device_uart *uart) { pl011_uart_init(); }
 
+void uart_putchar(char c) { pl011_uart_putchar(c); }
+
 void uart_print(char *c) {
   pl011_uart_puts(c);
   return;
