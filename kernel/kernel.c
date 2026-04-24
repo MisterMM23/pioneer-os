@@ -5,7 +5,9 @@
 int main() {
 
   kernel_init_state();
-  uart_print("Hey\n");
+  uart_print("-------------\n");
+  uart_print("PIONEER-OS\n");
+  uart_print("-------------\n");
 
   while (1) {
   }
