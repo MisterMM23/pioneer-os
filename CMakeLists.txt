@@ -32,6 +32,10 @@ target_sources(pio_armv8
 target_include_directories(pio_armv8
   PRIVATE
     kernel/include
+
+    # In the lib include directory, every library shall have its own search path
+    # (e. g. foo.h from lib/include/mylib/foo.h will be included with #include <foo.h> )
+    lib/include/libc
 )
 
 target_compile_options(pio_armv8 
