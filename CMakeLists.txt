@@ -26,6 +26,9 @@ target_sources(pio_armv8
     kernel/arch/armv8/qemu/uart.c
     kernel/arch/armv8/boot.S
     kernel/arch/armv8/pl011/pl011_uart.c
+    
+    # For now, library code is just added here
+    lib/libc/string.c
 )
 
 
